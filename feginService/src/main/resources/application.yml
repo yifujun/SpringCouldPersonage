@@ -1,0 +1,17 @@
+server:
+  port: 8080
+eureka:
+  instance:
+    hostname: localhost
+    preferIpAddress: true   #就可以将IP注册到Eureka Server上，而如果不配置就是机器的主机名。
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+spring:
+  application:
+    name: feign
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: false
